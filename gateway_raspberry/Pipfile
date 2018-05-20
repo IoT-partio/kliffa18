@@ -1,0 +1,22 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+flask = "*"
+jsonschema = "*"
+pytest = "*"
+"2d57d3a" = {path = "./ingest_api", editable = true}
+
+
+[dev-packages]
+
+
+
+[requires]
+
+python_version = "3.6"
