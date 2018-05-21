@@ -21,7 +21,7 @@ app.config.update(dict(
     SAUNA_SCHEMA={
         "temperature": "number",
         "humidity": "number",
-        "mac_adress": "string"
+        "mac_address": "string"
     }
 ))
 app.config.from_envvar('INGEST_API_SETTINGS', silent=True)
@@ -87,7 +87,7 @@ def close_db(error):
 def add_sauna():
     db = get_db()
     data = request.get_json()
-    db.execute('insert into sauna (temperature, humidity, mac_adress) values (?, ?, ?)',
-    [data['temperature'], data['humidity'], data['mac_adress']])
+    db.execute('insert into sauna (temperature, humidity, mac_address) values (?, ?, ?)',
+    [data['temperature'], data['humidity'], data['mac_address']])
     db.commit()
     return '', 204

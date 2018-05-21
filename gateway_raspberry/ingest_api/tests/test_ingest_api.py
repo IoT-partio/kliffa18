@@ -21,6 +21,6 @@ class IngestApiTestCase(unittest.TestCase):
         response = self.app.post('/sauna', data=json.dumps({
             "temperature": 60,
             "humidity": 40,
-            "mac_adress": "00:00:00:00:00:00"
+            "mac_address": "00:00:00:00:00:00"
         }), content_type='application/json')
         assert response.status_code == 204
