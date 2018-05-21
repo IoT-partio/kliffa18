@@ -4,5 +4,7 @@
 .vs/*
 *.pyproj
 *.pyproj.user
-*/.eggs
-
+**/.eggs
+**/.pytest_cache
+**/*.egg-info
+*.pyc
