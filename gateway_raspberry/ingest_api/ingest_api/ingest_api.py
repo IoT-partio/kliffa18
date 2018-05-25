@@ -22,6 +22,12 @@ app.config.update(dict(
         "temperature": "number",
         "humidity": "number",
         "mac_address": "string"
+    },
+    BAJAMAJA_SCHEMA={
+        "US0_DIST": "number",
+        "US1_DIST": "number",
+        "US2_DIST": "number",
+        "mac_address": "string"
     }
 ))
 app.config.from_envvar('INGEST_API_SETTINGS', silent=True)
