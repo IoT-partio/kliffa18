@@ -1,0 +1,1 @@
+https://travis-ci.org/IoT-partio/kliffa18.svg?branch=master
