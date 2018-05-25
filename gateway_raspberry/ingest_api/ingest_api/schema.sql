@@ -4,7 +4,7 @@ create table sauna (
   temperature float,
   humidity float,
   arrival_time datetime default current_timestamp,
-  mac_adress text
+  mac_address text
   --foreign key(sensor_id) references sensors(sensor_id) not null
 );
 
