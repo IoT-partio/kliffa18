@@ -11,7 +11,7 @@ create table sauna (
 drop table if exists sensors;
 create table sensors (
     sensor_id integer primary key autoincrement,
-    mac_adress text not null unique,
+    mac_address text not null unique,
     sensor_descripton text
 );
 
