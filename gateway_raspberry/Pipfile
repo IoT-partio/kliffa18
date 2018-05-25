@@ -9,12 +9,11 @@ name = "pypi"
 
 flask = "*"
 jsonschema = "*"
-pytest = "*"
 "2d57d3a" = {path = "./ingest_api", editable = true}
 
 
 [dev-packages]
-
+pytest = "*"
 
 
 [requires]
