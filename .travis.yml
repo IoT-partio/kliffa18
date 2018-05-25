@@ -3,5 +3,4 @@ language: python
     - "3.6"
   install: "make"
 
-  script:
-    - make test
+  script: make test
