@@ -6,3 +6,5 @@ install: make
 
 script: 
   - make test
+
+after_success: coverage report

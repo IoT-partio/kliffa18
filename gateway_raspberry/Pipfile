@@ -13,7 +13,9 @@ jsonschema = "*"
 
 
 [dev-packages]
+
 pytest = "*"
+pytest-cov = "*"
 
 
 [requires]
