@@ -24,3 +24,15 @@ class IngestApiTestCase(unittest.TestCase):
             "mac_address": "00:00:00:00:00:00"
         }), content_type='application/json')
         assert response.status_code == 204
+
+    def test_json_check_fails(self):
+        response = self.app.post('/sauna', data="junk",
+        content_type='application/json')
+        assert response.status_code == 400
+
+    def test_schema_fails(self):
+        response = self.app.post('/sauna', data=json.dumps({
+            "temperature": 60,
+            "mac_address": "00:00:00:00:00:00"
+        }), content_type='application/json')
+        assert response.status_code == 400

@@ -10,7 +10,7 @@ from flask import Flask, request, session, g, redirect, url_for, abort, \
 from jsonschema import validate, ValidationError
 
 app = Flask(__name__) # create the application instance :)
-app.config.from_object(__name__) # load config from this file , flaskr.py
+app.config.from_object(__name__) # load config from this file
 
 # Load default config and override config from an environment variable
 app.config.update(dict(
@@ -19,15 +19,23 @@ app.config.update(dict(
     USERNAME='admin',
     PASSWORD='default',
     SAUNA_SCHEMA={
-        "temperature": "number",
-        "humidity": "number",
-        "mac_address": "string"
+        "type": "object",
+        "properties": {
+            "temperature": {"type": "number"},
+            "humidity": {"type": "number"},
+            "mac_address": {"type": "string"}
+        },
+        "required": ["temperature", "humidity", "mac_address"]
     },
     BAJAMAJA_SCHEMA={
-        "US0_DIST": "number",
-        "US1_DIST": "number",
-        "US2_DIST": "number",
-        "mac_address": "string"
+        "type": "object",
+        "properties": {
+            "US0_DIST": {"type": "number"},
+            "US1_DIST": {"type": "number"},
+            "US2_DIST": {"type": "number"}
+        },
+        "required": ["US0_DIST", "US1_DIST", "US2_DIST"]
+    
     }
 ))
 app.config.from_envvar('INGEST_API_SETTINGS', silent=True)

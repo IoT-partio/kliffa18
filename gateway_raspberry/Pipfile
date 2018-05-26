@@ -7,7 +7,7 @@ name = "pypi"
 
 [packages]
 
-flask = "*"
+Flask = "*"
 jsonschema = "*"
 "2d57d3a" = {path = "./ingest_api", editable = true}
 
