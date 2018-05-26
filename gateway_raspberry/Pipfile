@@ -16,6 +16,7 @@ jsonschema = "*"
 
 pytest = "*"
 pytest-cov = "*"
+coveralls = "*"
 
 
 [requires]
